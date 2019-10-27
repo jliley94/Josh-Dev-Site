@@ -1,4 +1,18 @@
-.pf-section {
+.pf-section-block {
+  display: flex;
+  justify-content: center;
+
+  &.vertical {
+    flex-direction: column;
+  }
+  &.horizontal {
+    flex-direction: row;
+    .pf-section {
+        margin: 0 20px;
+      }
+  }
+
+  .pf-section {
     background: #0066dd;
     padding: 20px;
     color: white;
@@ -6,23 +20,24 @@
     align-self: center;
 
     &.fill {
-        width: 100%;
-        font-size: 20px;
+      width: 100%;
+      font-size: 20px;
     }
     &.large {
-        width: 960px;
-        font-size: 20px;
+      width: 960px;
+      font-size: 20px;
     }
     &.med {
-        width: 65%;
-        font-size: 16px;
+      width: 65%;
+      font-size: 16px;
     }
     &.small {
-        width: 35%;
-        font-size: 14px;
+      width: 35%;
+      font-size: 14px;
     }
-}
+  }
 
-.pf-subsection .pf-section {
+  .pf-subsection .pf-section {
     margin: 0 20px;
+  }
 }

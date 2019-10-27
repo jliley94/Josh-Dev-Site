@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import PageSection from "../PageSection/pageSection"
 
 import Header from "../Header/header"
-import "./sectionedView.scss"
 
 const SectionedView = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +20,7 @@ const SectionedView = ({ children }) => {
     <div>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main className="pf-main">{children}</main>
+        <main>{children}</main>
       </div>
       <footer>
         <PageSection size="fill" color="#fef" background="#666">

@@ -2,11 +2,11 @@ import * as React from 'react';
 import './pageSection.scss';
 
 export interface ISectionProps {
-    size: string,
-    color: string;
-    background: string | null
-    children: React.ReactNode
-  }
+  size: string
+  color: string
+  background: string | null
+  children: React.ReactNode
+}
   
   export default class PageSection extends React.Component<ISectionProps, {}> {
   

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My Portfolio`,
+    title: `Joshua Liley`,
     description: `This is a simple React site I've built to demonstrate my web development skills.`,
     author: `@jliley94`,
   },

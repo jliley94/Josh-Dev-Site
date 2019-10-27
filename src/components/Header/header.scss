@@ -1,34 +1,52 @@
+@import '../../styles/variables.scss';
+
 .pf-header {
-    background: 'transparent';
-    // margin-bottom: 1.45rem;
+  background: "transparent";
+	// margin-bottom: 1.45rem;
 
-    .pf-header-zone {
-        margin: 0 auto;
-        max-width: 960px;
-        padding: 1.45rem 1.0875rem;
+  .pf-header-zone {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1.45rem 1.0875rem;
 
-        h1 {
-            margin: 0;
-            text-align: center;
-            .pf-head-title {
-                color: #112244;
-                text-decoration: none;
-            }
-        }
-        nav {
-            display: flex;
-            text-align: center;
-
-            .pf-navLink { //.pf-navButton {
-                flex: 1;
-                text-decoration: none;
-
-                .pf-navButton { //.pf-navLink {
-                    padding: 1rem;
-                    color: lightsteelblue;
-                }
-            }  
-        }
-              
+    h1 {
+      margin: 0;
+      text-align: center;
+      .pf-head-title, & span { 
+        color: $brand-blue;
+        text-decoration: none;
+      }
     }
+    nav {
+      display: flex;
+      text-align: center;
+
+      .pf-navLink {
+        //.pf-navButton {
+        flex: 1;
+        text-decoration: none;
+
+        .pf-navButton {
+          //.pf-navLink {
+          padding: 1rem;
+          color: $brand-blue;
+        }
+      }
+    }
+
+    .pf-contact-icons {
+      position: absolute;
+      margin: auto;
+      left: 92%;
+      top: 3%;
+
+      div {
+        * {
+          font-size: 2.5rem;
+					padding: 5px;
+					color: $brand-blue;
+        }
+      }
+    }
+  }
 }

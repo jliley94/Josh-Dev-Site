@@ -8,15 +8,24 @@ export interface INavButtonProps {
   }
   
   export default class NavButton extends React.Component<INavButtonProps, {}> {
-    
+
+    constructor(props: any) {
+      super(props);
+      this.onClickHandler = this.onClickHandler.bind(this);
+    }
+
+    public onClickHandler() {
+      console.log(this);
+    }
+
     public render() {
   
       return (
-        <Link className="pf-navLink" to={this.props.link}>
+        <a className="pf-navLink"  onClick={this.onClickHandler}>
           <div className="pf-navButton">
-            {this.props.name}
+            <div>{this.props.name}</div>
           </div>
-        </Link>
+        </a>
       );
     }
   }

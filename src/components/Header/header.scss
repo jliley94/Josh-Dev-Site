@@ -22,14 +22,21 @@
       text-align: center;
 
       .pf-navLink {
-        //.pf-navButton {
         flex: 1;
         text-decoration: none;
 
         .pf-navButton {
-          //.pf-navLink {
           padding: 1rem;
-          color: $brand-blue;
+					color: $brand-blue;
+					border-bottom: 3px transparent solid;
+					transition: 1s;
+					font-size: 1rem;
+					
+					&:hover {
+						border-color: orange;
+						font-size: 1.3rem;
+						color:#33495b;
+					}
         }
       }
     }
@@ -40,13 +47,27 @@
       left: 92%;
       top: 3%;
 
-      div {
+      .pf-icon-holder {
         * {
           font-size: 2.5rem;
-					padding: 5px;
+					padding: 0.25rem;
 					color: $brand-blue;
+					&:hover {
+						animation-name: wiggle;
+						animation-duration: 0.4s;
+						animation-iteration-count: 2;
+					}
         }
       }
     }
   }
+}
+
+@keyframes wiggle {
+	0% {transform: rotateZ(0deg);}
+	10% {transform: rotateZ(3deg);}
+	30% {transform: rotateZ(-7deg);}
+	50% {transform: rotateZ(3deg); transform: scale(1.2); filter: grayscale(1);	}
+	70% {transform: rotateZ(-7deg);}
+	100% {transform: rotateZ(0deg);}
 }

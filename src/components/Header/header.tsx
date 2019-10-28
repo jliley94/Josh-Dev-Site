@@ -1,16 +1,16 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import NavButton from "./navButton"
-import "./header.scss"
+import * as React from "react";
+import { Link } from "gatsby";
+import NavButton from "./navButton";
+import "./header.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export interface INavButtonProps {
-  siteTitle: string
+export interface IHeaderProps {
+  siteTitle: string;
   // children: React.ReactNode
 }
 
-export default class Header extends React.Component<INavButtonProps, {}> {
+export default class Header extends React.Component<IHeaderProps, {}> {
   public render() {
     return (
       <header className="pf-header">
@@ -32,14 +32,20 @@ export default class Header extends React.Component<INavButtonProps, {}> {
           </section>
 
           <div className="pf-contact-icons">
-            <div>
-              <FontAwesomeIcon icon="envelope" />
-              <FontAwesomeIcon icon={["fab", "linkedin"]} />
-              <FontAwesomeIcon icon={["fab", "github"]} />
+            <div className="pf-icon-holder">
+              <a href="https://www.linkedin.com/in/joshualiley/" target="_blank">
+                <FontAwesomeIcon icon={["fab", "linkedin"]} />
+              </a>
+              <a href="https://github.com/jliley94" target="_blank">
+                <FontAwesomeIcon icon={["fab", "github"]} />
+              </a>
+              <a href="mailTo:jliley94@gmail.com" target="_blank">
+                <FontAwesomeIcon icon="envelope" />
+              </a>
             </div>
           </div>
         </div>
       </header>
-    )
+    );
   }
 }

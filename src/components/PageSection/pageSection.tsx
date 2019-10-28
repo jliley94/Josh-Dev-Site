@@ -17,11 +17,11 @@ export interface ISectionProps {
   
     public render() {
   
-        const backgroundImg = (this.props.background) ? this.props.background : "transparent";
+        const background = (this.props.background) ? this.props.background : "transparent";
         const padding = (this.props.padding) ? this.props.padding : "20px";
 
       return (
-        <section className={`pf-section ${this.props.size}`} style={{ color: this.props.color, background: backgroundImg, padding: padding }}>
+        <section className={`pf-section ${this.props.size}`} style={{ color: this.props.color, backgroundImage: background, backgroundColor: background, padding: padding }}>
             {this.props.children}
         </section>
       );

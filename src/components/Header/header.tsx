@@ -23,11 +23,11 @@ export default class Header extends React.Component<IHeaderProps, {}> {
 
           <section>
             <nav>
-              <NavButton name="About" link="/about/" />
-              <NavButton name="Projects" link="/projects/" />
-              <NavButton name="Work" link="/work/" />
-              <NavButton name="Skills" link="/skills/" />
-              <NavButton name="My Feed" link="/feed/" />
+              <NavButton name="About" link={1} />
+              <NavButton name="Projects" link={2} />
+              <NavButton name="Work" link={3} />
+              <NavButton name="Skills" link={4} />
+              <NavButton name="My Feed" link={5} />
             </nav>
           </section>
 

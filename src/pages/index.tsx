@@ -19,6 +19,7 @@ const NewDesign = () => (
         color="#ddd"
         background="url('https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')"
         padding="150px 0"
+        navigationPoint= { 1 }
       >
         <h2>About me</h2> 
 
@@ -43,6 +44,8 @@ const NewDesign = () => (
         size="fill"
         color="#666"
         background={null}
+        navigationPoint={ 2 }
+        padding="80px 0"
       >
         <h2>This is the projects section</h2>
         <SectionBlock direction={FlexDirection.Horizontal} type={SectionType.Expandable} background={null}>
@@ -73,7 +76,7 @@ const NewDesign = () => (
       </PageSection>
 
       {/* Section Three: Work */}
-      <PageSection size="fill" color="#ddd" background="#12a5aa">
+      <PageSection size="fill" color="#ddd" background="#12a5aa" navigationPoint={ 3 } padding="100px 0">
         <h2>This is the work section</h2>
         <p>
           I will put info about my job here i guess, what i do, skills, things ive worked on etc...
@@ -81,13 +84,13 @@ const NewDesign = () => (
       </PageSection>
 
       {/* Section Four: Skills */}
-      <PageSection size="fill" color="#ddd" background="#f555ff">
+      <PageSection size="fill" color="#ddd" background="#f555ff" navigationPoint={ 4 } padding="80px 0">
         <h2>This is the skills section</h2>
         <p>My skills include but are not limited to, writing random stuff that has no meaning</p>
       </PageSection>
 
-      {/* Section Four: Mu Feed */}
-      <PageSection size="fill" color="#0066dd" background="transparent">
+      {/* Section Four: My Feed */}
+      <PageSection size="fill" color="#0066dd" background="transparent" navigationPoint={ 5 } padding="100px 0">
         <h2>My Feed</h2>
 
         <SectionBlock direction={FlexDirection.Horizontal} type={SectionType.Normal} background={null}>   

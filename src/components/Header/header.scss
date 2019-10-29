@@ -23,7 +23,9 @@
 
       .pf-navLink {
         flex: 1;
-        text-decoration: none;
+				text-decoration: none;
+				cursor: pointer;
+				user-select: none;
 
         .pf-navButton {
           padding: 1rem;
@@ -52,6 +54,9 @@
           font-size: 2.5rem;
 					padding: 0.25rem;
 					color: $brand-blue;
+					cursor: pointer;
+					user-select: none;
+					
 					&:hover {
 						animation-name: wiggle;
 						animation-duration: 0.4s;

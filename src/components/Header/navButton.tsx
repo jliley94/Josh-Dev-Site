@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 export interface INavButtonProps {
     name: string,
-    link: string
+    link: string | number
     // children: React.ReactNode
   }
   
@@ -14,14 +14,16 @@ export interface INavButtonProps {
       this.onClickHandler = this.onClickHandler.bind(this);
     }
 
-    public onClickHandler() {
-      console.log(this);
+    public onClickHandler(e) {
+      const navDestination = e.currentTarget.getAttribute('data-id');
+      const target = document.querySelector(`main .pf-section[data-nav-point="${navDestination}"]`);
+      target.scrollIntoView({behavior: "smooth", block: "start"});
     }
 
     public render() {
   
       return (
-        <a className="pf-navLink"  onClick={this.onClickHandler}>
+        <a className="pf-navLink" data-id={this.props.link} onClick={this.onClickHandler}>
           <div className="pf-navButton">
             <div>{this.props.name}</div>
           </div>

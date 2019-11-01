@@ -1,0 +1,13 @@
+$scale: 1.1;
+$time: 0.75s;
+
+.pf-hover-zoom {
+    background-size: cover;
+    background-position: 50%;
+    transition: all $time;
+    
+    &:hover {
+        transform: scale($scale);
+        transition: all $time;
+    }
+}

@@ -16,5 +16,12 @@ body {
   li,
   ul {
     font-family: 'Open Sans', sans-serif;
+
+    .pf-standout {
+      font-style: italic;
+      border-bottom: 3px solid orange;
+      color: #33495b;
+      line-height: 1.5rem;
+    }
   }
 }

@@ -15,7 +15,8 @@ export enum FlexDirection {
 
 export enum SectionType {
   Normal,
-  Expandable
+  Expandable,
+  Spaced
 }
   
   export default class SectionBlock extends React.Component<ISectionBlockProps, {}> {

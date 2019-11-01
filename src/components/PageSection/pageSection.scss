@@ -11,14 +11,31 @@
       margin: 0 20px;
     }
   }
+
+  &.normal {
+    section.pf-section {
+      align-self: center;
+    }
+  }
+
   &.expandable {
     section {
       flex: 1;
       transition: flex 1s;
 
+      &.pf-section {
+        align-self: stretch;
+      }
+
       &:hover {
         flex: 2;
       }
+    }
+  }
+
+  &.spaced {
+    .pf-section {
+      margin: 10px 0;
     }
   }
 
@@ -30,24 +47,29 @@
     align-self: center;
     background-size: cover;
     background-position: 50%;
+    overflow: hidden;
 
     &.fill {
       width: 100%;
       font-size: 20px;
     }
     &.large {
-      width: 960px;
+      width: 75%;
       font-size: 20px;
     }
-    &.med {
+    &.medium {
       width: 65%;
       font-size: 16px;
+    }
+    &.wide {
+      width: 960px;
+      font-size: 20px;
     }
     &.small {
       width: 35%;
       font-size: 14px;
     }
-    &.x-small {
+    &.x_small {
       width: 15%;
       font-size: 14px;
     }

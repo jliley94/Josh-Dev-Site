@@ -9,6 +9,7 @@ import "typeface-open-sans";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faChevronCircleLeft, faChevronCircleRight, faCircle as fasCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCircle as farCircle } from '@fortawesome/free-regular-svg-icons'
 
-library.add(fab, faEnvelope);
+library.add(fab, faEnvelope, faChevronCircleLeft, faChevronCircleRight, fasCircle, farCircle);

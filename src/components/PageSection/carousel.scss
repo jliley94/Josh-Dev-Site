@@ -1,0 +1,32 @@
+.pf-carousel-container {
+  > div > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    transition: all 1s;
+
+    &.pf-carousel-buttons {
+      margin-left: 0;
+
+      svg {
+        padding: 1px;
+        
+        &.disabled {
+          opacity: 0;
+        }
+      }
+    }
+
+    &.pf-carousel-slides {
+      > li {
+        transition: all 1s;
+        opacity: 0;
+        flex: 1;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

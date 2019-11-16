@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import PageSection from "../PageSection/pageSection"
 import { SectionSize } from "../PageSection/pageSection";
-import Header from "../Header/header"
+import CornerButton from "../Header/cornerButton";
 
-const SectionedView = ({ children }) => {
+const ReturnOnlyView = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SectionedViewSiteTitleQuery {
+    query ReturnOnlySiteTitleQuery {
       site {
         siteMetadata {
           title
@@ -18,7 +18,7 @@ const SectionedView = ({ children }) => {
 
   return (
     <div>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <CornerButton text="Back" link="/"/>
       <div>
         <main>{children}</main>
       </div>
@@ -31,8 +31,8 @@ const SectionedView = ({ children }) => {
   )
 }
 
-SectionedView.propTypes = {
+ReturnOnlyView.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default SectionedView
+export default ReturnOnlyView

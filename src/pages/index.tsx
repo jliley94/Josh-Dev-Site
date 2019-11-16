@@ -16,13 +16,13 @@ import "../../src/styles/global.scss";
 
 const NewDesign = () => (
   <SectionedView>
+    <SEO title="My Portfolio" />
     <SectionBlock
       direction={FlexDirection.Vertical}
       type={SectionType.Normal}
       background={null}
     >
-      <SEO title="New design" />
-
+      
       {/* Section One: About */}
       <PageSection
         size={SectionSize.Fill}
@@ -267,8 +267,10 @@ const NewDesign = () => (
             color="#ddd"
             background="#0066dd"
           >
-            <h2>Stuff im up to</h2>
-            <p>Blah blah blah...</p>
+            <Link to="./Challenges/word-chain/">
+              <h2>Coding Challenge - Word Chain</h2>
+              <p>Blah blah blah...</p>
+            </Link>
           </PageSection>
 
           {/* Section Four: Mu Feed */}

@@ -35,9 +35,9 @@
 					font-size: 1rem;
 					
 					&:hover {
-						border-color: orange;
+						border-color: $orange;
 						font-size: 1.3rem;
-						color:#33495b;
+						color: $dull-blue;
 					}
         }
       }

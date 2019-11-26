@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 body {
   h1,
   h1 span,
@@ -19,8 +21,8 @@ body {
 
     .pf-standout {
       font-style: italic;
-      border-bottom: 3px solid orange;
-      color: #33495b;
+      border-bottom: 3px solid $orange;
+      color: $dull-blue;
       line-height: 1.5rem;
     }
   }

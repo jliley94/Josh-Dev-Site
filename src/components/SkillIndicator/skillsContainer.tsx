@@ -30,9 +30,9 @@ export default class SkillsContainer extends React.Component< {}, ISkillsContain
       return (
           <div className={`pf-skill-group ${containerShow}`}> 
             <h3>{SkillCategory[group].replace(/[\_]/gi, ' ')}</h3>
-            { data.filter(skill => (skill.category == group)).map(skill => {
+            { data.filter(skill => (skill.category == group)).map((skill, i) => {
                 let icon;   
-                const show = (skill.name.toLowerCase().includes(this.state.searchQuery.toLowerCase()));
+                const show = (skill.name.toLowerCase().includes(this.state.searchQuery.toLowerCase())) ? "show" : "hidden";
                 switch (skill.iconType) {
                     case SkillIconType.Brand:   
                         icon = ["fab", skill.icon ];
@@ -40,7 +40,7 @@ export default class SkillsContainer extends React.Component< {}, ISkillsContain
                     default:
                         icon = skill.icon
                 } 
-                return <SkillIndicator icon={icon} name={skill.name} progress={skill.progress} show={show} />
+                return <SkillIndicator key={i} icon={icon} name={skill.name} progress={skill.progress} extraClasses={[show]} />
                 })
             }
         </div>

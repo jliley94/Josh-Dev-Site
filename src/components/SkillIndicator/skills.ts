@@ -24,11 +24,11 @@ export const skills: ISkillsProps[] = [
         progress: 4
     },
     {
-        name: "Html 5",
+        name: "TypeScript",
         category: SkillCategory.Front_End_Languages,
-        icon: "html5",
-        iconType: SkillIconType.Brand,
-        progress: 5
+        icon: "code",
+        iconType: SkillIconType.Solid,
+        progress: 4
     },
     {
         name: "Bootstrap",
@@ -68,7 +68,7 @@ export const skills: ISkillsProps[] = [
     {
         name: "SQL",
         category: SkillCategory.Other_Programming_Language,
-        icon: "code",
+        icon: "database",
         iconType: SkillIconType.Solid,
         progress: 4
     },
@@ -102,7 +102,7 @@ export const skills: ISkillsProps[] = [
     },
     {
         name: "Git",
-        category: SkillCategory.Tools,
+        category: SkillCategory.Other,
         icon: "github-square",
         iconType: SkillIconType.Brand,
         progress: 4
@@ -117,22 +117,22 @@ export const skills: ISkillsProps[] = [
     {
         name: "Design",
         category: SkillCategory.Other,
-        icon: "code",
+        icon: "icons",
         iconType: SkillIconType.Solid,
-        progress: 4
+        progress: 3
     },
     {
         name: "NPM",
         category: SkillCategory.Other,
         icon: "npm",
         iconType: SkillIconType.Brand,
-        progress: 4
+        progress: 3
     },
     {
         name: "Gulp",
         category: SkillCategory.Other,
         icon: "gulp",
         iconType: SkillIconType.Brand,
-        progress: 4
+        progress: 3
     }
 ];

@@ -1,72 +1,91 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .pf-skill-container {
-    //display: flex;
-    //justify-content: center;
+  //display: flex;
+  //justify-content: center;
+  .pf-skill-group {
+    margin: 2rem 0;
+    transition: all 1s;
 
-    .show {
-        opacity: 1;
-        transform: scale(1);
+    &.show {
+      opacity: 1;
+      transform: scale(1);
     }
-    .hidden {
-        opacity: 0;
-        transform: scale(0);
-        overflow: hidden;
-        height: 0;
-        width: 0;
+    &.hidden {
+      opacity: 0;
+      transform: scale(0);
     }
-    .pf-skill-group {
-        margin: 2rem 0;
-    }
+  }
 }
 
 .skill-indicator {
-    //flex: 1;
-    width: 10%;
-    display: inline-block; 
-    transition: all 1s;
+  //flex: 1;
+  width: 10%;
+  display: inline-block;
+  transition: all 1s;
 
-    svg {
-        font-size: 5rem;
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s 1s, transform 1s 1s, width 1s, height 1s;
+  }
+  &.hidden {
+    opacity: 0;
+    transform: scale(0);
+    &.removed {
+      overflow: hidden;
+      height: 0;
+      width: 0;
     }
+  }
+  &.horizontal {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
 
-    .si-name {
-        line-height: 2rem;
+  svg {
+    font-size: 5rem;
+  }
+
+  .si-name {
+    line-height: 2rem;
+    width: 100%;
+  }
+
+  .si-progress {
+    background: $off-white;
+    border-radius: 10px;
+    height: 1rem;
+    width: 35%;
+    display: flex;
+    margin: auto;
+
+    .si-progress-bar {
+      background: $bright-turquoise;
+      border-radius: 10px;
+      height: 0.6rem;
+      width: 100%;
+      margin: 0.2rem;
+
+      &.prog-5 {
+        width: 100%;
+      }
+      &.prog-4 {
+        width: 80%;
+      }
+      &.prog-3 {
+        width: 60%;
+      }
+      &.prog-2 {
+        width: 40%;
+      }
+      &.prog-1 {
+        width: 20%;
+      }
+      &.prog-0 {
+        width: 0%;
+      }
     }
-
-    .si-progress {
-        background: $off-white;
-        border-radius: 10px;
-        height: 1rem;
-        width: 35%;
-        display: flex;
-        margin: auto;
-
-        .si-progress-bar {
-            background: $bright-turquoise;
-            border-radius: 10px;
-            height: 0.6rem;
-            width: 100%;
-            margin: 0.2rem;
-
-            &.prog-5 {
-                width: 100%;
-            }
-            &.prog-4 {
-                width: 80%;
-            }
-            &.prog-3 {
-                width: 60%;
-            }
-            &.prog-2 {
-                width: 40%;
-            }
-            &.prog-1 {
-                width: 20%;
-            }
-            &.prog-0 {
-                width: 0%;
-            }
-        }
-    }
+  }
 }

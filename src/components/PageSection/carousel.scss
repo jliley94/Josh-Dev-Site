@@ -8,11 +8,17 @@
     &.pf-carousel-buttons {
       margin-left: 0;
 
+      li {
+        padding: 0 0.5vh;
+      }
+
       svg {
         padding: 1px;
+        cursor: pointer;
         
         &.disabled {
-          opacity: 0;
+          opacity: 0.4;
+          cursor: auto;
         }
       }
     }

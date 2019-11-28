@@ -193,8 +193,8 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
           {/* Section Three: Work */}
           <PageSection
             size={SectionSize.Fill}
-            color="#ddd"
-            background="#12a5aa"
+            color="#565656"
+            background="#ddd"
             navigationPoint={3}
             padding="100px 0"
           >
@@ -205,46 +205,98 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
               {/* Section Three: Work - Description */}
               <PageSection
                 size={SectionSize.Fill}
-                color="#112244"
-                background="#ddd"
+                color="#565656"
+                background="#a88e82"
+                padding="3vh 4vh"
               >
                 <h2>I graduated from Sheffield Hallam University</h2>
+                <h4>BSc Honours in IT with Business Technologies | Grade: 2.1</h4>
                 <p>
-                  I studied Information technologies with Business from 2012-2016
+                  This course covered a wide range of computing topics including web development, software design, project management, 
+                  database administration and design, and system analysis. This gave me experience with Javascript, CSS, C#, PHP, SQL, 
+                  and Visual Basic, as well as other areas such as giving presentations, working to deadlines, and working within a team
                 </p>
 
-                <h4>Modules:</h4>
-                <ul>
-                  <li>Ive worked on React projects</li>
-                  <li>Passed 2 certified microsoft exams</li>
-                  <li>Given talks internally and externally on programming</li>
-                  <li>Consulted with clients to architect a solution</li>
-                  <li>provided first line support to clients</li>
-                </ul>
+                <SectionBlock
+                  direction={FlexDirection.Horizontal}
+                  type={SectionType.Normal}
+                  background="transparent"
+                  >
+                    <PageSection
+                      size={SectionSize.Fill}
+                      color="#565656"
+                      background="#a88e82"
+                      padding="3vh 4vh"
+                    >
+                      <h4>Projects Included:</h4>
+                      <ul>
+                        <li>Web Applications (PHP, SQL, JavaScript)</li>
+                        <li>Software Applications (Java, Android, Visual Basic)</li>
+                        <li>Building and Configuring Computer Systems</li>
+                        <li>Creating and managing data within databases</li>
+                      </ul>
+                      </PageSection>
+                    <PageSection
+                      size={SectionSize.Fill}
+                      color="inherit"
+                      background="transparent"
+                    >
+                      <h4>Modules Included:</h4>
+                      <ul>
+                        <li>Advanced Web Technologies</li>
+                        <li>Data Warehousing and Data Mining</li>
+                        <li>Internet Entrepreneurship</li>
+                        <li>Object-Orientated Programming</li>
+                        <li>Interactive Web Applications</li>
+                        <li>E-Business Technologies</li>
+                        <li>Planning & Project Management</li>
+                      </ul>
+                      </PageSection>
+                </SectionBlock>
               </PageSection>
               {/* Section Three: Work - Highlights */}
               <PageSection
                 size={SectionSize.Fill}
-                color="#112244"
-                background="#ddd"
+                color="#565656"
+                background="#a88e82"
+                padding="3vh 4vh"
               >
                 <h2>I currently work at a SharePoint consultancy in Chester</h2>
                 <p>
-                  As a developer at WM Reply, I work with a range of clients, that I
-                  provide bespoke solutions for their unique problems. This means
-                  I'm constantly collaborating on projects with different scopes.
-                  This enables me to grow many different skills, in a variety of
+                  As a developer at WM Reply, I work with a range of clients, providing 
+                  bespoke solutions to their unique problems. This means
+                  I'm constantly collaborating on projects with different scopes,
+                  enabling me to grow many different skills, in a variety of
                   areas.
                 </p>
-
-                <h4>Highlights:</h4>
-                <ul>
-                  <li>Ive worked on React projects</li>
-                  <li>Passed 2 certified microsoft exams</li>
-                  <li>Given talks internally and externally on programming</li>
-                  <li>Consulted with clients to architect a solution</li>
-                  <li>provided first line support to clients</li>
-                </ul>
+                <SectionBlock
+                  direction={FlexDirection.Horizontal}
+                  type={SectionType.Normal}
+                  background="transparent"
+                  >
+                    <PageSection
+                      size={SectionSize.Fill}
+                      color="inherit"
+                      background="transparent"
+                    >
+                      <h4>Highlights:</h4>
+                      <ul>
+                        <li>Ive worked on React projects</li>
+                        <li>Given talks internally and externally on programming</li>
+                        <li>Consulted with clients to architect solutions</li>
+                        <li>provided first line support to clients</li>
+                      </ul>
+                      </PageSection>
+                    <PageSection
+                      size={SectionSize.Fill}
+                      color="inherit"
+                      background="transparent"
+                    >
+                      <h4>Achievements:</h4>
+                      <SkillIndicator icon={["fab", "microsoft"]} name="Microsoft Certified: Azure Fundamentals"  extraClasses={["horizontal"]} />
+                      <SkillIndicator icon={["fab", "windows"]} name="Programming in HTML5 with JavaScript and CSS3" extraClasses={["horizontal"]}/>
+                      </PageSection>
+                </SectionBlock>
               </PageSection>
             </Carousel>
           </PageSection>

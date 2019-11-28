@@ -72,7 +72,7 @@ export default class Carousel extends React.Component<
                     <FontAwesomeIcon icon="chevron-circle-left" />
                 </a>
               ) : (
-                <FontAwesomeIcon className="disabled" icon="chevron-circle-right" />
+                <FontAwesomeIcon className="disabled" icon="chevron-circle-left" />
               )}
             </li>
             {React.Children.map(children, (element, i) => {

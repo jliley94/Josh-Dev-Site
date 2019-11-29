@@ -42,10 +42,12 @@
     display: flex;
     width: 100%;
     align-items: center;
+    margin: 4vh 0;
   }
 
-  svg {
+  svg, i {
     font-size: 5rem;
+    line-height: 5rem;
   }
 
   .si-name {

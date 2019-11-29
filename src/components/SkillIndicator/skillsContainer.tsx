@@ -40,7 +40,7 @@ export default class SkillsContainer extends React.Component< {}, ISkillsContain
                     default:
                         icon = skill.icon
                 } 
-                return <SkillIndicator key={i} icon={icon} name={skill.name} progress={skill.progress} extraClasses={[show]} />
+                return <SkillIndicator key={i} icon={icon} iconType={skill.iconType} name={skill.name} progress={skill.progress} extraClasses={[show]} />
                 })
             }
         </div>
@@ -48,9 +48,6 @@ export default class SkillsContainer extends React.Component< {}, ISkillsContain
   }
   public render() {
     const remainingSkills = skills.filter(skill => (this.state.searchQuery.length > 0) ? skill.name.toLowerCase().includes(this.state.searchQuery.toLowerCase()) : true);
-    const frontEnd = skills.filter(skill => (skill.category === SkillCategory.Front_End_Languages));
-    const backEnd = skills.filter(skill => (skill.category === SkillCategory.Other_Programming_Language));
-    const other = skills.filter(skill => (skill.category === SkillCategory.Other));
 
     return (
       <div>
@@ -67,6 +64,7 @@ export default class SkillsContainer extends React.Component< {}, ISkillsContain
             <div className={`pf-skill-container`}>
                 {this.displayGroup(skills, SkillCategory.Front_End_Languages)}
                 {this.displayGroup(skills, SkillCategory.Other_Programming_Language)}
+                {this.displayGroup(skills, SkillCategory.Microsoft_Technologies)}
                 {this.displayGroup(skills, SkillCategory.Other)}
             </div>
         </PageSection>

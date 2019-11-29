@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SkillsContainer from "./../components/SkillIndicator/skillsContainer";
 import SkillIndicator from "../components/SkillIndicator/skillIndicator";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { SkillIconType } from "../components/SkillIndicator/skills.modules";
 
 export interface IPortfolioState {
   searchQuery: string;
@@ -281,10 +282,10 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                     >
                       <h4>Highlights:</h4>
                       <ul>
-                        <li>Ive worked on React projects</li>
+                        <li>Passing 2 Microsoft certified exams</li>
                         <li>Given talks internally and externally on programming</li>
                         <li>Consulted with clients to architect solutions</li>
-                        <li>provided first line support to clients</li>
+                        <li>provided second line support to clients</li>
                       </ul>
                       </PageSection>
                     <PageSection
@@ -292,9 +293,9 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                       color="inherit"
                       background="transparent"
                     >
-                      <h4>Achievements:</h4>
-                      <SkillIndicator icon={["fab", "microsoft"]} name="Microsoft Certified: Azure Fundamentals"  extraClasses={["horizontal"]} />
-                      <SkillIndicator icon={["fab", "windows"]} name="Programming in HTML5 with JavaScript and CSS3" extraClasses={["horizontal"]}/>
+                      <h4>Microsoft Certified Exams</h4>
+                      <SkillIndicator icon="AzureLogo" iconType={SkillIconType.Fabric} name="Azure Fundamentals"  extraClasses={["horizontal"]} />
+                      <SkillIndicator icon="WindowsLogo" iconType={SkillIconType.Fabric} name="Programming in HTML5 with JavaScript and CSS3" extraClasses={["horizontal"]}/>
                       </PageSection>
                 </SectionBlock>
               </PageSection>

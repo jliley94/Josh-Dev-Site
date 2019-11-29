@@ -2,9 +2,11 @@ import * as React from 'react';
 import './skillIndicator.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SkillCategory, SkillIconType } from "./skills.modules";
+import { Icon } from 'office-ui-fabric-react/lib/Icon';
 
 export interface ISkillIndicatorProps {
   icon: any,
+  iconType: SkillIconType
   name: string,
   progress?: number,
   extraClasses?: string[]
@@ -12,10 +14,6 @@ export interface ISkillIndicatorProps {
 export interface ISkillIndicatorState {
   additionalClasses: string[]
 }
-export interface ISkillsProps extends ISkillIndicatorProps {
-    iconType: SkillIconType,
-    category: SkillCategory
-  }
   
   export default class SkillIndicator extends React.Component<ISkillIndicatorProps, ISkillIndicatorState> {
   
@@ -46,10 +44,13 @@ export interface ISkillsProps extends ISkillIndicatorProps {
   
     public render() {
       const allClasses = this.props.extraClasses.concat(this.state.additionalClasses);
-
       return (
         <div className={`skill-indicator ${allClasses.join(" ")}`} onTransitionEnd={(e) => this.removeElement(e)}>
-            <FontAwesomeIcon icon={this.props.icon} />
+            {(this.props.iconType == SkillIconType.Fabric) ?
+              <Icon iconName={this.props.icon} title={this.props.name} ariaLabel={this.props.icon} />
+              :
+              <FontAwesomeIcon icon={this.props.icon} />
+            }
             <div className="si-name">
                 { this.props.name }
             </div>

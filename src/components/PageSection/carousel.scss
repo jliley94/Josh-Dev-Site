@@ -1,0 +1,49 @@
+.pf-carousel-container {
+  > div > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    transition: all 1s;
+
+    &.pf-carousel-buttons {
+      margin-left: 0;
+
+      li {
+        padding: 0 0.5vh;
+      }
+
+      svg {
+        padding: 1px;
+        cursor: pointer;
+        
+        &.disabled {
+          opacity: 0.4;
+          cursor: auto;
+        }
+      }
+    }
+
+    &.pf-carousel-slides {
+      margin: 0;
+
+      > li {
+        transition: all 1s;
+        opacity: 0;
+        flex: 1;
+        @media only screen and (max-width: 1500px) {
+          display: none;
+        }
+
+        &.active {
+          opacity: 1;
+          display: block;
+        }
+        &.hide {
+          @media only screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

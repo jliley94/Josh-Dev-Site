@@ -1,0 +1,72 @@
+.pf-back-button {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  text-decoration: none;
+
+  .cb-content {
+    width: 45vh;
+
+    svg {
+      path.corner {
+        fill: #336d55;
+        stroke-width: 4;
+        animation-duration: 1s;
+        animation-name: flow-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    &:hover {
+        .pf-button-text {
+            transform: rotateZ(45deg) scale(2) translate(0vh, 8vh);
+        }
+        svg {
+            path.corner {
+                animation-duration: 1s;
+                animation-name: flow-out;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+              }
+        }
+    }
+
+    .pf-button-text {
+        position: absolute;
+        top: 5vh;
+        right: 5vh;
+        transform: rotateZ(45deg) scale(1);
+        transition: all 1.5s;
+    }
+  }
+
+  @keyframes flow-out {
+    0% {
+      d: path("M150 0, c25 25,75 75,150 150, v-150, Z");
+    }
+
+    25% {
+      d: path("M75 0, c75 150,150 0,225 225, v-225, Z");
+    }
+
+    75% {
+      d: path("M0 0, c225 0,75 225,300 300, v-300, Z");
+    }
+
+    100% {
+      d: path("M0 0, c75 75,225 225,300 300, v-300, Z");
+    }
+  }
+
+  @keyframes flow-in {
+    0% {
+      d: path("M0 0, c75 75,225 225,300 300, v-300, Z");
+    }
+    100% {
+      d: path("M150 0, c25 25,75 75,150 150, v-150, Z");
+    }
+  }
+}

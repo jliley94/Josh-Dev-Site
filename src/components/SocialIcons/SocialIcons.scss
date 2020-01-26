@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    input, textarea {
+        background: #fff;
+        border: none;
+        border-bottom: $orange solid 3px;
+        padding: 10px;
+        flex: 1;
+        font-size: 1rem;
+    }
+}

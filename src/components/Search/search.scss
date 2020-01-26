@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.search-bar {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 35%;
+
+    .search-box {
+        background: #fff;
+        border: none;
+        border-bottom: $orange solid 3px;
+        padding: 10px;
+        flex: 1;
+        font-size: 1rem;
+    }
+}

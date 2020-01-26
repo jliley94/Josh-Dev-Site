@@ -70,7 +70,7 @@ export const skills: ISkillsProps[] = [
         category: SkillCategory.Other_Programming_Language,
         icon: "database",
         iconType: SkillIconType.Solid,
-        progress: 4
+        progress: 3
     },
     {
         name: "PHP",

@@ -10,6 +10,14 @@
     .pf-section {
       margin: 0 20px;
     }
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+        .pf-section {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          align-self: center;
+        }
+    }
   }
 
   &.normal {
@@ -30,6 +38,12 @@
       &:hover {
         flex: 2;
       }
+    }
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+        section.pf-section { 
+          align-self: center;
+        }
     }
   }
 
@@ -62,16 +76,29 @@
       font-size: 16px;
     }
     &.wide {
-      width: 960px;
-      font-size: 20px;
+      width: 45%; //960px;
+      font-size: 1.2rem;
+      @media only screen and (max-width: 1500px) {
+        width: 60%;
+      }
+      @media only screen and (max-width: 1000px) {
+        width: 80%;
+      }
     }
     &.small {
       width: 35%;
       font-size: 14px;
+      
     }
     &.x_small {
       width: 15%;
       font-size: 14px;
+      @media only screen and (max-width: 1500px) {
+        width: 20%;
+      }
+      @media only screen and (max-width: 1000px) {
+        width: 50%;
+      }
     }
   }
 

@@ -22,11 +22,11 @@ const SectionedView = ({ children }) => {
       <div>
         <main>{children}</main>
       </div>
-      <footer>
+      {/* <footer>
         <PageSection size={SectionSize.Fill} color="#fef" background="#666">
           Built by Joshua Liley
         </PageSection>
-      </footer>
+      </footer> */}
     </div>
   )
 }

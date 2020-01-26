@@ -1,12 +1,11 @@
 @import '../../styles/variables.scss';
 
-.search-bar {
+.contact-form {
     display: flex;
+    flex-direction: column;
     margin: auto;
     justify-content: center;
-    width: 35%;
-
-    .search-box {
+    input, textarea {
         background: #fff;
         border: none;
         border-bottom: $orange solid 3px;

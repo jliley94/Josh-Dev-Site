@@ -17,6 +17,7 @@ export default class Carousel extends React.Component<
   ICarouselProps,
   ICarouselState
 > {
+  smallScreen: number;
   constructor(props: any) {
     super(props);
     this.state = {
@@ -24,11 +25,13 @@ export default class Carousel extends React.Component<
       xPositionOffset: 0,
     };
     this.handleSlideChange = this.handleSlideChange.bind(this);
+    this.smallScreen = 1500;
   }
 
   public componentDidMount() {
     console.log("x:", this.props.children);
     this.handleSlideChange(this.props.startingSlide);
+    window.addEventListener('resize', () => this.handleSlideChange(this.state.activeSlide))
   }
 
   public handleSlideChange(slideTo) {
@@ -46,7 +49,7 @@ export default class Carousel extends React.Component<
     this.setState({
       ...this.state,
       activeSlide: newSlide,
-      xPositionOffset: -spaceBefore + screenMiddle - elementMidpoint,
+      xPositionOffset: (window.outerWidth > this.smallScreen) ? -spaceBefore + screenMiddle - elementMidpoint : 0,
     });
   }
 

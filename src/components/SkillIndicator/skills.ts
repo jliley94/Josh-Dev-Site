@@ -26,8 +26,8 @@ export const skills: ISkillsProps[] = [
     {
         name: "TypeScript",
         category: SkillCategory.Front_End_Languages,
-        icon: "TypeScriptLanguage",
-        iconType: SkillIconType.Fabric,
+        icon: "file-code",
+        iconType: SkillIconType.Solid,
         progress: 4
     },
     {
@@ -96,8 +96,8 @@ export const skills: ISkillsProps[] = [
     {
         name: "C#",
         category: SkillCategory.Other_Programming_Language,
-        icon: "CSharpLanguage",
-        iconType: SkillIconType.Fabric,
+        icon: "file-code",
+        iconType: SkillIconType.Solid,
         progress: 2
     },
     {
@@ -117,8 +117,8 @@ export const skills: ISkillsProps[] = [
     {
         name: "Design",
         category: SkillCategory.Other,
-        icon: "MapLayers",
-        iconType: SkillIconType.Fabric,
+        icon: "object-ungroup",
+        iconType: SkillIconType.Solid,
         progress: 3
     },
     {
@@ -138,50 +138,50 @@ export const skills: ISkillsProps[] = [
     {
         name: "Command Line",
         category: SkillCategory.Other,
-        icon: "CommandPrompt",
-        iconType: SkillIconType.Fabric,
+        icon: "terminal",
+        iconType: SkillIconType.Solid,
         progress: 3
     },  
     {
         name: "Sharepoint",
         category: SkillCategory.Microsoft_Technologies,
-        icon: "SharepointAppIcon16",
-        iconType: SkillIconType.Fabric,
+        icon: "folder-open",
+        iconType: SkillIconType.Solid,
         progress: 5
     },
     {
         name: "Azure",
         category: SkillCategory.Microsoft_Technologies,
-        icon: "AzureLogo",
-        iconType: SkillIconType.Fabric,
+        icon: "cloud",
+        iconType: SkillIconType.Solid,
         progress: 3
     },
     {
         name: "Office 365",
         category: SkillCategory.Microsoft_Technologies,
-        icon: "OfficeLogo",
-        iconType: SkillIconType.Fabric,
+        icon: "file-alt",
+        iconType: SkillIconType.Solid,
         progress: 5
     },
     {
         name: "VS Code",
         category: SkillCategory.Microsoft_Technologies,
-        icon: "VisualStudioLogo",
-        iconType: SkillIconType.Fabric,
+        icon: "window-maximize",
+        iconType: SkillIconType.Solid,
         progress: 4
     },
     {
         name: "DevOps",
         category: SkillCategory.Microsoft_Technologies,
-        icon: "VSTSLogo",
-        iconType: SkillIconType.Fabric,
+        icon: "code-branch",
+        iconType: SkillIconType.Solid,
         progress: 4
     },
     {
         name: "Flow",
         category: SkillCategory.Microsoft_Technologies,
-        icon: "MicrosoftFlowLogo",
-        iconType: SkillIconType.Fabric,
+        icon: "project-diagram",
+        iconType: SkillIconType.Solid,
         progress: 5
     }
 ];

@@ -47,7 +47,7 @@ export interface ISkillIndicatorState {
       return (
         <div className={`skill-indicator ${allClasses.join(" ")}`} onTransitionEnd={(e) => this.removeElement(e)}>
             {(this.props.iconType == SkillIconType.Fabric) ?
-              <Icon iconName={this.props.icon} title={this.props.name} ariaLabel={this.props.icon} />
+              <FontAwesomeIcon icon={this.props.icon} />
               :
               <FontAwesomeIcon icon={this.props.icon} />
             }

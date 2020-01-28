@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import SectionedView from "../components/Layouts/SectionedView";
 import SEO from "../components/seo";
 import {
@@ -13,10 +12,8 @@ import { SectionSize } from "../components/PageSection/pageSection";
 import HoverZoom from "../components/HoverZoom/hoverZoom";
 import UserImg from "../components/userImage";
 import "../../src/styles/global.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SkillsContainer from "./../components/SkillIndicator/skillsContainer";
 import SkillIndicator from "../components/SkillIndicator/skillIndicator";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 import { SkillIconType } from "../components/SkillIndicator/skills.modules";
 import ContactForm from "../components/ContactForm/ContactForm";
 import SocialIcons from "../components/SocialIcons/SocialIcons";
@@ -302,14 +299,14 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                   >
                     <h4>Microsoft Certified Exams</h4>
                     <SkillIndicator
-                      icon="AzureLogo"
-                      iconType={SkillIconType.Fabric}
+                      icon="cloud"
+                      iconType={SkillIconType.Solid}
                       name="Azure Fundamentals"
                       extraClasses={["horizontal"]}
                     />
                     <SkillIndicator
-                      icon="WindowsLogo"
-                      iconType={SkillIconType.Fabric}
+                      icon={["fab", "windows"]}
+                      iconType={SkillIconType.Brand}
                       name="Programming in HTML5 with JavaScript and CSS3"
                       extraClasses={["horizontal"]}
                     />

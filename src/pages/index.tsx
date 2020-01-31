@@ -17,6 +17,7 @@ import SkillIndicator from "../components/SkillIndicator/skillIndicator";
 import { SkillIconType } from "../components/SkillIndicator/skills.modules";
 import ContactForm from "../components/ContactForm/ContactForm";
 import SocialIcons from "../components/SocialIcons/SocialIcons";
+import DisplayImage from "../components/ImageDisplay";
 
 export interface IPortfolioState {
   searchQuery: string;
@@ -299,14 +300,15 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                   >
                     <h4>Microsoft Certified Exams</h4>
                     <SkillIndicator
-                      icon="cloud"
-                      iconType={SkillIconType.Solid}
+                      icon="Cert2.png"
+                      iconType={SkillIconType.Image}
                       name="Azure Fundamentals"
                       extraClasses={["horizontal"]}
                     />
+                    
                     <SkillIndicator
-                      icon={["fab", "windows"]}
-                      iconType={SkillIconType.Brand}
+                      icon="Cert1.png"
+                      iconType={SkillIconType.Image}
                       name="Programming in HTML5 with JavaScript and CSS3"
                       extraClasses={["horizontal"]}
                     />
@@ -331,7 +333,7 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
 
           {/* Section Four: My Feed */}
           <PageSection
-            size={SectionSize.Fill}
+            size={SectionSize.Wide}
             color="#112244"
             background="transparent"
             navigationPoint={5}
@@ -346,7 +348,7 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
               background="transparent"
             >
               <PageSection
-                size={SectionSize.Small}
+                size={SectionSize.Fill}
                 color="#112244"
                 background="transparent"
                 padding="50px 0"
@@ -357,7 +359,7 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
               </PageSection>
 
               <PageSection
-                size={SectionSize.Small}
+                size={SectionSize.Fill}
                 color="#112244  "
                 background="transparent"
                 padding="0"

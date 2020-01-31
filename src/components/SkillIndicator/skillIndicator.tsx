@@ -3,6 +3,7 @@ import './skillIndicator.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SkillCategory, SkillIconType } from "./skills.modules";
 import { Icon } from 'office-ui-fabric-react/lib/Icon';
+import DisplayImage from '../ImageDisplay';
 
 export interface ISkillIndicatorProps {
   icon: any,
@@ -48,6 +49,9 @@ export interface ISkillIndicatorState {
         <div className={`skill-indicator ${allClasses.join(" ")}`} onTransitionEnd={(e) => this.removeElement(e)}>
             {(this.props.iconType == SkillIconType.Fabric) ?
               <FontAwesomeIcon icon={this.props.icon} />
+              :
+              (this.props.iconType == SkillIconType.Image) ?
+              <DisplayImage imageName={this.props.icon} />
               :
               <FontAwesomeIcon icon={this.props.icon} />
             }

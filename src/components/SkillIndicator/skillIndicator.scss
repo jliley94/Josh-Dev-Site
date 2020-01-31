@@ -23,6 +23,7 @@
   width: 10%;
   display: inline-block;
   transition: all 1s;
+  padding: 10px;
 
   @media only screen and (max-width: 1500px) {
     width: 20%;
@@ -64,10 +65,15 @@
     }
   }
 
+  
+  .pf-displayedImage {
+    width: 25%;
+  }
+
   .si-name {
-    line-height: 2rem;
     width: 100%;
     font-size: 1rem;
+    padding: 5px;
     @media only screen and (max-width: 1000px) {
       line-height: 1.5rem;
     }

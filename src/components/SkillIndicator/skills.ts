@@ -1,5 +1,4 @@
-import { ISkillsProps } from "./skillIndicator";
-import { SkillIconType, SkillCategory } from "./skills.modules";
+import { SkillIconType, SkillCategory, ISkillsProps } from "./skills.modules";
 
 export const skills: ISkillsProps[] = [
     {

@@ -26,6 +26,12 @@ import {
   faWindowMaximize,
   faCodeBranch,
   faProjectDiagram,
+  faPlusSquare,
+  faTrashAlt,
+  faClock,
+  faPlug,
+  faBatteryQuarter,
+  faBatteryFull,
   faCircle as fasCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { faCircle as farCircle } from "@fortawesome/free-regular-svg-icons";
@@ -48,6 +54,12 @@ library.add(
   faWindowMaximize,
   faCodeBranch,
   faProjectDiagram,
+  faPlusSquare,
+  faTrashAlt,
+  faClock,
+  faPlug,
+  faBatteryQuarter,
+  faBatteryFull,
   fasCircle,
   farCircle,
 );

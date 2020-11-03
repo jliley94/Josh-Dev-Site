@@ -1,0 +1,14 @@
+.tags-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.45rem;
+
+    div[class^="tag-"] {
+        font-size: 0.8rem;
+        color: #dddddd;
+        border: solid;
+        padding: 5px;
+        margin: 5px;
+    }
+}

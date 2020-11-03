@@ -1,0 +1,37 @@
+.mds-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 2000px) {
+        flex-direction: column;
+      }
+    
+    .input-menu {
+        flex-grow: 1;
+        color: #ccc;
+        color: black;
+        .menuTitle {
+            font-weight: bold;
+        }
+        .slide-input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input {
+                margin: 2px 5px;
+                &[type="text"] {
+                    padding: 2px 5px;
+                    min-width: 55%;
+                }
+            }
+        }
+        .add-item {
+            margin-top: 5px;
+            color: rgb(29, 167, 87);
+        }
+        .button {
+            cursor: pointer;
+        }
+    }
+}

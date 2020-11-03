@@ -18,6 +18,12 @@ import { SkillIconType } from "../components/SkillIndicator/skills.modules";
 import ContactForm from "../components/ContactForm/ContactForm";
 import SocialIcons from "../components/SocialIcons/SocialIcons";
 import DisplayImage from "../components/ImageDisplay";
+import MultiDirectionalSlider from "../components/multiDirectionalSlider/MultiDirectionalSlider";
+import ScriptArea from "../components/ScriptArea/ScriptArea";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MDSContainer from "../components/multiDirectionalSlider/MDSContainer";
+import TimeLine from "../components/TimeLine/TimeLine";
+import Tags from "../components/Tags/tags";
 
 export interface IPortfolioState {
   searchQuery: string;
@@ -27,7 +33,7 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      searchQuery: "",
+      searchQuery: ""
     };
   }
 
@@ -95,96 +101,72 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
           {/* Section Two: Projects */}
           <PageSection
             size={SectionSize.Fill}
-            color="#666"
+            color="#112244"
             background={null}
             navigationPoint={2}
             padding="80px 0"
           >
-            <h2>What im working on</h2>
+            <h2>Personal Projects</h2>
             <SectionBlock
               direction={FlexDirection.Horizontal}
-              type={SectionType.Expandable}
+              type={SectionType.Reverse}
               background={null}
             >
-              {/* Section Two: Projects - P1 */}
               <PageSection
-                size={SectionSize.Medium}
+                size={SectionSize.Small}
                 color="#ddd"
-                background="#112244"
+                background={null}
+                padding="80px 0"
               >
-                <h3>To do</h3>
-
-                <SectionBlock
-                  direction={FlexDirection.Vertical}
-                  type={SectionType.Spaced}
-                  background={null}
-                >
-                  <PageSection
-                    size={SectionSize.Fill}
-                    color="#112244"
-                    background="#fff"
-                  >
-                    <h4>Gain another Microsoft qualification</h4>
-                  </PageSection>
-                  <PageSection
-                    size={SectionSize.Fill}
-                    color="#112244"
-                    background="#fff"
-                  >
-                    <h4>Learn another language</h4>
-                  </PageSection>
-                </SectionBlock>
+                <MDSContainer />
               </PageSection>
-
-              {/* Section Two: Projects - P2 */}
               <PageSection
-                size={SectionSize.Medium}
+                size={SectionSize.Wide}
                 color="#ddd"
                 background="#112244"
               >
-                <h3>In progress</h3>
-                <SectionBlock
-                  direction={FlexDirection.Vertical}
-                  type={SectionType.Spaced}
-                  background={null}
-                >
-                  <PageSection
-                    size={SectionSize.Fill}
-                    color="#112244"
-                    background="#fff"
-                  >
-                    <h4>Build an Alexa skill</h4>
-                  </PageSection>
-                  <PageSection
-                    size={SectionSize.Fill}
-                    color="#112244"
-                    background="#fff"
-                  >
-                    <h4>Create a Reddit bot</h4>
-                  </PageSection>
-                </SectionBlock>
+                <h4>Multi-Directional Slider</h4>
+                <p>
+                  This is a content slider I made which randomly transitions between slides passed to it as a JSON object. You can use the settings panel to change the text and colours of the slides, add new slides, and delete slides dynamically.
+                </p>
+                <Tags tags={["React", "SCSS", "JSON"]} />
+                <a className="icon" href="https://github.com/jliley94/My-Components/tree/master/src/components/multiDirectionalSlider" target="_blank">
+                  <FontAwesomeIcon icon={["fab", "github"]} style={ { fontSize: "2.5rem" } }/>
+                </a>
               </PageSection>
+            </SectionBlock>
 
-              {/* Section Two: Projects - P2 */}
+            <SectionBlock
+              direction={FlexDirection.Horizontal}
+              type={SectionType.Normal}
+              background={null}
+            >
               <PageSection
-                size={SectionSize.Medium}
+                size={SectionSize.Wide}
                 color="#ddd"
                 background="#112244"
               >
-                <h3>Completed</h3>
-                <SectionBlock
-                  direction={FlexDirection.Vertical}
-                  type={SectionType.Spaced}
-                  background={null}
-                >
-                  <PageSection
-                    size={SectionSize.Fill}
-                    color="#112244"
-                    background="#fff"
-                  >
-                    <h4>This Portfolio Site</h4>
-                  </PageSection>
-                </SectionBlock>
+                <h4>Laptop Charge Changer </h4>
+                <p>
+                  My laptops battery is awful! it always runs out of power at the worst possible times without me noticing. I've connected my laptop to a smart WIFI plug and created a Python script which can turn on and off the smart plug depending on the battery level. This script is run on a schedule so that i never need to monitor my laptops battery. It does everything automatically. 
+                </p>
+                <Tags tags={["Python", "REST API", "Automated Script"]} />
+                <a className="icon" href="https://github.com/jliley94/ChargeChanger" target="_blank">
+                  <FontAwesomeIcon icon={["fab", "github"]} style={ { fontSize: "2.5rem" } }/>
+                </a>
+              </PageSection>
+              <PageSection
+                size={SectionSize.Small}
+                color="#ddd"
+                background={null}
+              >
+                <TimeLine>
+                  <FontAwesomeIcon icon={"clock"} style={ { fontSize: "2.5rem" } }/>
+                  <FontAwesomeIcon icon={["fab", "python"]} style={ { fontSize: "2.5rem" } }/>
+                  <FontAwesomeIcon className="not-charged" icon={"battery-quarter"} style={ { fontSize: "2.5rem" } }/>
+                  <FontAwesomeIcon icon={"plug"} style={ { fontSize: "2.5rem" } }/>
+                  <FontAwesomeIcon className="charged" icon={"battery-full"} style={ { fontSize: "2.5rem" } }/>
+                </TimeLine>
               </PageSection>
             </SectionBlock>
           </PageSection>
@@ -305,7 +287,7 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                       name="Azure Fundamentals"
                       extraClasses={["horizontal"]}
                     />
-                    
+
                     <SkillIndicator
                       icon="Cert1.png"
                       iconType={SkillIconType.Image}
@@ -339,7 +321,6 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
             navigationPoint={5}
             padding="50px 0"
           >
-
             <h2>Contact</h2>
 
             <SectionBlock
@@ -353,9 +334,7 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                 background="transparent"
                 padding="50px 0"
               >
-
                 <ContactForm />
-
               </PageSection>
 
               <PageSection
@@ -364,7 +343,12 @@ export default class Portfolio extends React.Component<{}, IPortfolioState> {
                 background="transparent"
                 padding="0"
               >
-                <SocialIcons linkedIn={true} github={true} email={false} size="4.5rem" />
+                <SocialIcons
+                  linkedIn={true}
+                  github={true}
+                  email={false}
+                  size="4.5rem"
+                />
               </PageSection>
             </SectionBlock>
           </PageSection>

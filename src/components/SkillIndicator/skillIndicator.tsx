@@ -35,7 +35,7 @@ export interface ISkillIndicatorState {
           updatedClasses.push("removed");
           this.setState({...this.state, additionalClasses: updatedClasses});
         } else {
-          console.log("add...");
+          // console.log("add...");
           let updatedClasses = this.state.additionalClasses;
           updatedClasses = updatedClasses.filter(className => (className != "removed"));
           this.setState({...this.state, additionalClasses: updatedClasses});
@@ -44,7 +44,7 @@ export interface ISkillIndicatorState {
     }
   
     public render() {
-      const allClasses = this.props.extraClasses.concat(this.state.additionalClasses);
+      const allClasses = (this.props.extraClasses) ? this.props.extraClasses.concat(this.state.additionalClasses) : this.state.additionalClasses;
       return (
         <div className={`skill-indicator ${allClasses.join(" ")}`} onTransitionEnd={(e) => this.removeElement(e)}>
             {(this.props.iconType == SkillIconType.Fabric) ?

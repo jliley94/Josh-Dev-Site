@@ -83,7 +83,7 @@ export const skills: ISkillsProps[] = [
         category: SkillCategory.Other_Programming_Language,
         icon: "python",
         iconType: SkillIconType.Brand,
-        progress: 2
+        progress: 3
     },
     {
         name: "Java",
@@ -97,7 +97,7 @@ export const skills: ISkillsProps[] = [
         category: SkillCategory.Other_Programming_Language,
         icon: "file-code",
         iconType: SkillIconType.Solid,
-        progress: 2
+        progress: 3
     },
     {
         name: "Git",
@@ -135,8 +135,8 @@ export const skills: ISkillsProps[] = [
         progress: 3
     },
     {
-        name: "Command Line",
-        category: SkillCategory.Other,
+        name: "PowerShell",
+        category: SkillCategory.Microsoft_Technologies,
         icon: "terminal",
         iconType: SkillIconType.Solid,
         progress: 3
@@ -177,10 +177,10 @@ export const skills: ISkillsProps[] = [
         progress: 4
     },
     {
-        name: "Flow",
+        name: "Power Platfrom",
         category: SkillCategory.Microsoft_Technologies,
         icon: "project-diagram",
         iconType: SkillIconType.Solid,
-        progress: 5
+        progress: 4
     }
 ];

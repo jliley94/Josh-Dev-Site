@@ -88,6 +88,12 @@
     &.small {
       width: 35%;
       font-size: 14px;
+      @media only screen and (max-width: 1500px) {
+        width: 45%;
+      }
+      @media only screen and (max-width: 1000px) {
+        width: 100%;
+      }
       
     }
     &.x_small {

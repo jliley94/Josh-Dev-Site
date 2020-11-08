@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import NavButton from "./navButton";
 import "./header.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialIcons from "../SocialIcons/SocialIcons";
 
 export interface IHeaderProps {

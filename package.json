@@ -26,6 +26,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "rimraf": "^3.0.1",
     "typeface-b612": "0.0.75",
     "typeface-open-sans": "0.0.75"
   },

@@ -1,0 +1,24 @@
+.time-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .timeline-items {
+        flex-grow: 1;
+        font-size: 1.5rem;
+        color: #dddddd;
+        transition: all 1s ease-in-out;
+
+        &.active {
+            transform: scale(1.5);
+            color: #cccccc;
+
+            & .charged {
+                color: rgb(29, 167, 87);
+            }
+            & .not-charged {
+                color: rgb(167, 29, 29);
+            }
+        }
+    }
+}

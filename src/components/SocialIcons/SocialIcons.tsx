@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./SocialIcons.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FontSizes } from "office-ui-fabric-react/lib/Styling";
 
 export interface ISocialIconsProps {
   linkedIn: boolean;
